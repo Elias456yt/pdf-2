@@ -7,3 +7,21 @@ numero = input("Ahora, por favor ingresa un número de pocisiones: ")
 
 numero = int(numero)
 print("Hola,", nombre, ", tu número de posiciones es", numero)
+
+#act2 intermedio
+  #numero de hechizo
+numero = int(input("Por favor, ingresa el hechizo: "))
+  #resitencia del hechizo
+potencia = int(input("Ingresa la resistencia del hechizo: "))
+
+resultado = numero ** potencia
+
+  # Mostrar el resultado
+print("El resultado del hechizo", numero, "elevado a la resistencia", potencia, "es:", resultado)
+
+if resultado > 99:
+    print("¡Felicidades! ¡Has ganado!")
+else:
+    print("haz perdido.")
+
+
