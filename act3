@@ -1,0 +1,54 @@
+#act3 facil
+encontrado = input("¿Qué tesoro encontraste?: ")
+print("¡Felicidades por lo que conseguiste!")
+
+
+#act3 intermedio
+import random
+print("En una plaza delante de un banco se esconde algo...")
+
+preguntas_respuestas = input("seria una buena idea ir? ")
+
+if preguntas_respuestas == "si" : 
+  print("ES CORRECTOO")
+else :
+  print("ES INCORRECTOOOO")
+
+
+act3 DIFICIL
+import random
+
+# Definimos una lista de preguntas y respuestas verdaderas o falsas
+preguntas_respuestas = {
+    "¿La Tierra es plana?": False,
+    "¿El Sol gira alrededor de la Tierra?": False,
+    "¿2 + 2 es igual a 4?": True,
+    "¿El agua hierve a 100 grados Celsius?": True,
+    "¿Python es un lenguaje de programación?": True,
+    "¿El Papa vive en la Casa Blanca?": False
+}
+
+#pregunta y respuesta
+def mostrar_pregunta(pregunta, respuesta_correcta):
+    print(pregunta)
+    respuesta = input("¿Verdadero o Falso? (v/f): ").lower()
+    if respuesta == "v" and respuesta_correcta or respuesta == "f" and not respuesta_correcta:
+        print("¡Correcto!")
+        return True
+    else:
+        print("Incorrecto.")
+        return False
+
+# Función del juego
+def jugar():
+    preguntas = list(preguntas_respuestas.items())
+    random.shuffle(preguntas)  # Mezclar las preguntas para mayor variedad
+
+    puntaje = 0
+    for pregunta, respuesta in preguntas:
+        if mostrar_pregunta(pregunta, respuesta):
+            puntaje += 1
+        print("Tu puntaje final es: {}/{}".format(puntaje, len(preguntas)))
+
+#para iniciar el juego
+jugar()
