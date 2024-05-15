@@ -1,0 +1,9 @@
+#act2 facil
+#nombre del usuario
+nombre = input("Por favor, ingresa tu nombre: ")
+
+# numero de pocisiones
+numero = input("Ahora, por favor ingresa un número de pocisiones: ")
+
+numero = int(numero)
+print("Hola,", nombre, ", tu número de posiciones es", numero)
