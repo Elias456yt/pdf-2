@@ -8,6 +8,8 @@ numero = input("Ahora, por favor ingresa un número de pocisiones: ")
 numero = int(numero)
 print("Hola,", nombre, ", tu número de posiciones es", numero)
 
+
+
 #act2 intermedio
   #numero de hechizo
 numero = int(input("Por favor, ingresa el hechizo: "))
@@ -23,5 +25,26 @@ if resultado > 99:
     print("¡Felicidades! ¡Has ganado!")
 else:
     print("haz perdido.")
+
+
+#act2 dificil
+def calcular_factorial(n):
+  if n == 0 or n == 1:
+    return 1
+  else:
+    return n * calcular_factorial(n - 1)
+
+def calcular_combinaciones(n, k):
+  if k > n:
+    return 0
+  else:
+    return calcular_factorial(n)//(calcular_factorial(k) * calcular_factorial(n - k))
+
+n = int(input("Por favor, ingresa el numero de equipo: "))
+k = int(input("Por favor, ingresa el numero de personajes: "))
+
+cantidad_de_combinaciones = calcular_combinaciones(n, k)
+print("total de combinaciones",cantidad_de_combinaciones)
+
 
 
